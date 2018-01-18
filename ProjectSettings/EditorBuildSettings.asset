@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/HellicarGallery/Hellicar-Gallery-VR.unity
     guid: 6e8b46f498bc8814689f263b9df8ef2d
+  - enabled: 1
+    path: Assets/HellicarGallery/Hellicar-Gallery-VR Scripts.unity
+    guid: fc658c754694fc54889b69f47ce90d05
