@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace VRStandardAssets.Utils
 {
@@ -22,14 +23,18 @@ namespace VRStandardAssets.Utils
         [SerializeField] private float m_RayLength = 500f;              // How far into the scene the ray is cast.
 
         
-        private VRInteractiveItem m_CurrentInteractible;                //The current interactive item
-        private VRInteractiveItem m_LastInteractible;                   //The last interactive item
+        private List<VRInteractiveItem> m_CurrentInteractibles;                //The current interactive item
+        private List<VRInteractiveItem> m_LastInteractibles;                   //The last interactive item
 
-
-        // Utility for other classes to get the current interactive item
-        public VRInteractiveItem CurrentInteractible
+		private void Start()
+		{
+			m_CurrentInteractibles = new List<VRInteractiveItem>();
+			m_LastInteractibles = new List<VRInteractiveItem>();
+		}
+		// Utility for other classes to get the current interactive item
+		public List<VRInteractiveItem> CurrentInteractibles
         {
-            get { return m_CurrentInteractible; }
+            get { return m_CurrentInteractibles; }
         }
 
         
@@ -67,80 +72,139 @@ namespace VRStandardAssets.Utils
 
             // Create a ray that points forwards from the camera.
             Ray ray = new Ray(m_Camera.position, m_Camera.forward);
-            RaycastHit hit;
-            
-            // Do the raycast forweards to see if we hit an interactive item
-            if (Physics.Raycast(ray, out hit, m_RayLength, ~m_ExclusionLayers))
+
+			// Do the raycast forwards to see if we hit an interactive item
+			RaycastHit[] hits = Physics.RaycastAll(ray, m_RayLength, ~m_ExclusionLayers);
+
+			Debug.Log("Hits: " + m_CurrentInteractibles.Count);
+
+			m_CurrentInteractibles.Clear();
+
+			if (hits.Length > 0)
             {
-                VRInteractiveItem interactible = hit.collider.GetComponent<VRInteractiveItem>(); //attempt to get the VRInteractiveItem on the hit object
-                m_CurrentInteractible = interactible;
+				for (int i = 0; i < hits.Length; i++)
+				{
+					VRInteractiveItem interactible = hits[i].collider.GetComponent<VRInteractiveItem>(); //attempt to get the VRInteractiveItem on the hit object
+					m_CurrentInteractibles.Add(interactible);
+					interactible.Over();
 
-                // If we hit an interactive item and it's not the same as the last interactive item, then call Over
-                if (interactible && interactible != m_LastInteractible)
-                    interactible.Over(); 
+					// If we hit an interactive item and it's not the same as the last interactive item, then call Over
+					//if (m_LastInteractibles.Count > 0)
+					//{
+					//	bool found = false;
+					//	for(int j = 0; j < m_LastInteractibles.Count; j++)
+					//	{
+					//		if (interactible && interactible != m_LastInteractibles[j])
+					//		{
+					//			found = true;
+					//		}
+					//	}
+					//	if(!found)
+					//	{
+					//		Debug.Log("Over Called!");
+					//	}
+					//}
 
-                // Deactive the last interactive item 
-                if (interactible != m_LastInteractible)
-                    DeactiveLastInteractible();
+					// Something was hit, set at the hit position.
+					//if (m_Reticle)
+					//    m_Reticle.SetPosition(hit);
 
-                m_LastInteractible = interactible;
+					if (OnRaycasthit != null)
+						OnRaycasthit(hits[i]);
+				}
 
-                // Something was hit, set at the hit position.
-                //if (m_Reticle)
-                //    m_Reticle.SetPosition(hit);
-
-                if (OnRaycasthit != null)
-                    OnRaycasthit(hit);
-            }
+				for (int i = 0; i < m_LastInteractibles.Count; i++)
+				{
+					bool found = false;
+					for(int j = 0; j < m_CurrentInteractibles.Count; j++)
+					{
+						VRInteractiveItem interactible = m_CurrentInteractibles[j];
+						if (m_LastInteractibles[i] == interactible)
+						{
+							found = true;
+						}
+					}
+					if (!found)
+					{
+						Debug.Log("Out Called!");
+						m_LastInteractibles[i].Out();
+					}
+				}
+			}
             else
             {
-                // Nothing was hit, deactive the last interactive item.
-                DeactiveLastInteractible();
-                m_CurrentInteractible = null;
+				// Nothing was hit, deactive the last interactive item.
+				for(int i = 0; i < m_LastInteractibles.Count; i++)
+				{
+					m_LastInteractibles[i].Out();
+				}
+				m_LastInteractibles.Clear();
 
                 // Position the reticle at default distance.
                 //if (m_Reticle)
                 //    m_Reticle.SetPosition();
             }
-        }
+			m_LastInteractibles = new List<VRInteractiveItem>(m_CurrentInteractibles);
+		}
 
 
-        private void DeactiveLastInteractible()
+		private void DeactiveLastInteractibles(VRInteractiveItem item)
         {
-            if (m_LastInteractible == null)
+            if (item == null)
                 return;
 
-            m_LastInteractible.Out();
-            m_LastInteractible = null;
         }
 
 
         private void HandleUp()
         {
-            if (m_CurrentInteractible != null)
-                m_CurrentInteractible.Up();
-        }
+            if (m_CurrentInteractibles != null)
+			{
+				for (int i = 0; i < m_CurrentInteractibles.Count; i++)
+				{
+					m_CurrentInteractibles[i].Up();
+				}
+
+			}
+		}
 
 
         private void HandleDown()
         {
-            if (m_CurrentInteractible != null)
-                m_CurrentInteractible.Down();
-        }
+            if (m_CurrentInteractibles != null)
+			{
+				for (int i = 0; i < m_CurrentInteractibles.Count; i++)
+				{
+					m_CurrentInteractibles[i].Down();
+				}
+
+			}
+		}
 
 
         private void HandleClick()
         {
-            if (m_CurrentInteractible != null)
-                m_CurrentInteractible.Click();
-        }
+            if (m_CurrentInteractibles != null)
+			{
+				for (int i = 0; i < m_CurrentInteractibles.Count; i++)
+				{
+					m_CurrentInteractibles[i].Click();
+				}
 
+			}
+		}
 
         private void HandleDoubleClick()
         {
-            if (m_CurrentInteractible != null)
-                m_CurrentInteractible.DoubleClick();
+            if (m_CurrentInteractibles != null)
+			{
+				for (int i = 0; i < m_CurrentInteractibles.Count; i++)
+				{
+					m_CurrentInteractibles[i].DoubleClick();
+				}
 
-        }
+			}
+
+		}
     }
 }
