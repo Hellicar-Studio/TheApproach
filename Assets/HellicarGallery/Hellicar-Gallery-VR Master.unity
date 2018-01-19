@@ -174,113 +174,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &39692774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 39692775}
-  - component: {fileID: 39692781}
-  - component: {fileID: 39692780}
-  - component: {fileID: 39692779}
-  - component: {fileID: 39692778}
-  - component: {fileID: 39692776}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &39692775
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39692774}
-  m_LocalRotation: {x: 0.000000063176486, y: 0.3431743, z: -0.000000016682373, w: 0.93927175}
-  m_LocalPosition: {x: -0.00000011920929, y: 1.5415426, z: -0.0005968213}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 40.141003, z: 0}
---- !u!114 &39692776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39692774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationRange: {x: 70, y: 70}
-  rotationSpeed: 10
-  dampingTime: 0.2
-  autoZeroVerticalOnMobile: 1
-  autoZeroHorizontalOnMobile: 0
-  relative: 1
---- !u!81 &39692778
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39692774}
-  m_Enabled: 1
---- !u!124 &39692779
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39692774}
-  m_Enabled: 0
---- !u!92 &39692780
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39692774}
-  m_Enabled: 0
---- !u!20 &39692781
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39692774}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
-  field of view: 76
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: 1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!1 &76241399
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,8 +280,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &97543510
@@ -636,8 +529,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &151080555
@@ -872,8 +765,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &219288020
@@ -987,8 +880,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &245843726
@@ -1097,8 +990,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &264998424 stripped
@@ -1142,8 +1035,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &265517713
@@ -1257,8 +1150,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &321094085
@@ -1584,8 +1477,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &456728719
@@ -1768,8 +1661,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &476179924
@@ -1878,8 +1771,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &508169953
@@ -1993,8 +1886,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &529769678 stripped
@@ -2038,8 +1931,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &566114926
@@ -2365,8 +2258,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &654217131
@@ -2664,8 +2557,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &722174345
@@ -2959,8 +2852,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &792042882
@@ -3192,8 +3085,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &854764542
@@ -3344,8 +3237,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &936190682
@@ -3560,8 +3453,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1031523727
@@ -3826,8 +3719,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!4 &1095624332 stripped
@@ -4297,8 +4190,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1252867675
@@ -4477,8 +4370,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1283726046 stripped
@@ -4522,8 +4415,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1319169097 stripped
@@ -4567,8 +4460,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &1342865986
@@ -5269,8 +5162,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1526874312
@@ -5417,7 +5310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba913026a462b24f8ee61d406c04e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 39692781}
+  m_Camera: {fileID: 1768534731}
   m_TextureSize: 512
   m_ClipPlaneOffset: 0.07
   m_ReflectionStrength: 1
@@ -6033,8 +5926,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &1610392849
@@ -6773,10 +6666,146 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
+--- !u!1 &1768534724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1768534732}
+  - component: {fileID: 1768534731}
+  - component: {fileID: 1768534730}
+  - component: {fileID: 1768534729}
+  - component: {fileID: 1768534728}
+  - component: {fileID: 1768534727}
+  - component: {fileID: 1768534726}
+  - component: {fileID: 1768534725}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1768534725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d787b7ab9363ad048ade528a88cad2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1768534726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8902ef04f323e444b98d2e4fd80a56ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DoubleClickTime: 0.3
+  m_SwipeWidth: 0.3
+--- !u!114 &1768534727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffebc012055484b4899e163803755608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 1768534732}
+  m_ExclusionLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_VrInput: {fileID: 1768534726}
+  m_ShowDebugRay: 0
+  m_DebugRayLength: 5
+  m_DebugRayDuration: 1
+  m_RayLength: 500
+--- !u!81 &1768534728
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 1
+--- !u!124 &1768534729
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 0
+--- !u!92 &1768534730
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 0
+--- !u!20 &1768534731
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 76
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1768534732
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768534724}
+  m_LocalRotation: {x: 0.000000063176486, y: 0.3431743, z: -0.000000016682373, w: 0.93927175}
+  m_LocalPosition: {x: -0.00000011920929, y: 1.5415426, z: -0.0005968213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 40.141003, z: 0}
 --- !u!1001 &1793356159
 Prefab:
   m_ObjectHideFlags: 0
@@ -7027,8 +7056,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1899834481 stripped
@@ -7072,8 +7101,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1941510581
@@ -7222,8 +7251,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.13
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &2012944843
@@ -7303,8 +7332,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &2033804089
@@ -7382,8 +7411,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &2084438769
@@ -7644,8 +7673,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 1.59
+  m_Radius: 0.3
+  m_Height: 2.14
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1001 &2120594871
