@@ -76,8 +76,6 @@ namespace VRStandardAssets.Utils
 			// Do the raycast forwards to see if we hit an interactive item
 			RaycastHit[] hits = Physics.RaycastAll(ray, m_RayLength, ~m_ExclusionLayers);
 
-			Debug.Log("Hits: " + m_CurrentInteractibles.Count);
-
 			m_CurrentInteractibles.Clear();
 
 			if (hits.Length > 0)
@@ -126,7 +124,6 @@ namespace VRStandardAssets.Utils
 					}
 					if (!found)
 					{
-						Debug.Log("Out Called!");
 						m_LastInteractibles[i].Out();
 					}
 				}
