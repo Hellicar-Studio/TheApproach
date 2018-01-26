@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4db1370e20b20354e916d1252d7faf92
-timeCreated: 1516107822
+guid: 4b767e6f559cceb409ffa72887ad9d93
+timeCreated: 1516384073
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -68,7 +68,7 @@ ModelImporter:
     400058: Body
     400060: //RootNode
     4300000: Body
-    7400000: Take 001
+    7400000: SLOW-WALK_01
     9500000: //RootNode
     13700000: Body
   materials:
@@ -82,12 +82,25 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
-      in configuration does not match rotation in animation file:\n\t'Base HumanLCalf2'
-      : rotation error = 0.052435 deg\n\t'Base HumanRCalf2' : rotation error = 0.050760
-      deg\n"
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
+      rotation in copied configuration does not match rotation in animation file:\n\t'Base
+      HumanLCalf2' : rotation error = 1.428357 deg\n\t'Base HumanRCalf2' : rotation
+      error = 2.343626 deg\n\t'Base HumanSpine3' : rotation error = 0.324343 deg\n\t'Base
+      HumanRibcage' : rotation error = 0.070685 deg\n\t'Base HumanNeck2' : rotation
+      error = 0.755952 deg\n"
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Base HumanLThigh2' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Base HumanLCalf2' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      HumanRThigh2' is inbetween humanoid transforms and has rotation animation that
+      will be discarded.\n\t'Base HumanRCalf2' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Base HumanSpine3' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      HumanRibcage' is inbetween humanoid transforms and has rotation animation that
+      will be discarded.\n\t'Base HumanNeck2' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -97,7 +110,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SLOW-WALK_01
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -124,8 +165,8 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
-  copyAvatar: 0
+  importAnimation: 1
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human:
@@ -474,7 +515,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4db1370e20b20354e916d1252d7faf92,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
