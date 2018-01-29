@@ -28,10 +28,8 @@ public class GazeWalker : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log(Vector3.Distance(transform.position, anchorPos));
 		if(Vector3.Distance(transform.position, anchorPos) > controlRange)
 		{
-			Debug.Log("Greater");
 			interactiveItem.OnOut -= HandleOut;
 			interactiveItem.OnOver -= HandleOver;
 			anim.SetBool("Walk", true);

@@ -7,13 +7,36 @@ public class FaceCamera : MonoBehaviour {
 
 	public Transform target;
 	public Transform head;
+	public Transform anchor;
+	private Vector3 dynamicTarget;
+	private Vector3 anchorPos;
+	private Vector3 forward;
+	private Vector3 camPos;
+	public float range;
 	// Use this for initialization
 	void Start () {
-		
+		forward = head.forward;
+
+		anchorPos = anchor.position;
+
+		camPos = target.position;
+
+		dynamicTarget = camPos;
+
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
-		head.LookAt(new Vector3(target.position.x, target.position.y, target.position.z));
+		if (Vector3.Distance(head.position, anchorPos) < range)
+		{
+			dynamicTarget = camPos;
+		}
+		else
+		{
+			dynamicTarget = Vector3.Lerp(dynamicTarget, head.position + forward, 0.1f);
+		}
+
+		head.LookAt(dynamicTarget);
 	}
 }
