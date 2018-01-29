@@ -9,7 +9,9 @@ public class GazeWalker : MonoBehaviour {
 	public VRInteractiveItem interactiveItem;
 	public Transform anchor;
 	private Vector3 anchorPos;
-	public float range;
+	public float controlRange;
+	public float resetRange;
+
 	// Use this for initialization
 	void Start () {
 		if (anim == null)
@@ -27,19 +29,22 @@ public class GazeWalker : MonoBehaviour {
 	void Update()
 	{
 		Debug.Log(Vector3.Distance(transform.position, anchorPos));
-		if(Vector3.Distance(transform.position, anchorPos) > range)
+		if(Vector3.Distance(transform.position, anchorPos) > controlRange)
 		{
 			Debug.Log("Greater");
 			interactiveItem.OnOut -= HandleOut;
 			interactiveItem.OnOver -= HandleOver;
 			anim.SetBool("Walk", true);
-		} else
+		}
+
+		if (Vector3.Distance(transform.position, anchorPos) > resetRange)
 		{
-			Debug.Log("Less");
+			transform.position = anchorPos;
 			interactiveItem.OnOut += HandleOut;
 			interactiveItem.OnOver += HandleOver;
-			//anim.SetBool("Walk", false);
+			anim.SetBool("Walk", false);
 		}
+
 	}
 
 	private void HandleOver ()

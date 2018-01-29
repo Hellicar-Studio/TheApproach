@@ -2278,6 +2278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 483806731}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &483806735
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2689,6 +2692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 557740318}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &557740322
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3243,6 +3249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 657310101}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &657310105
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5331,6 +5340,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 1033578272}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &1033578276
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6555,6 +6567,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 1390540901}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &1390540905
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6859,6 +6874,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 1407948643}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &1407948647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7565,6 +7583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 1548665719}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &1548665723
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8126,6 +8147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   interactiveItem: {fileID: 0}
+  anchor: {fileID: 635938957}
+  controlRange: 6
+  resetRange: 18
 --- !u!136 &1716417362
 CapsuleCollider:
   m_ObjectHideFlags: 0
