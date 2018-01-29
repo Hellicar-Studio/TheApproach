@@ -85,7 +85,7 @@ ModelImporter:
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'Base
       HumanLCalf2' : rotation error = 1.428357 deg\n\t'Base HumanRCalf2' : rotation
-      error = 2.203133 deg\n\t'Base HumanSpine3' : rotation error = 0.324343 deg\n\t'Base
+      error = 2.202745 deg\n\t'Base HumanSpine3' : rotation error = 0.324343 deg\n\t'Base
       HumanRibcage' : rotation error = 0.070685 deg\n\t'Base HumanNeck2' : rotation
       error = 0.755952 deg\n"
     animationImportErrors: 
@@ -108,7 +108,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     animationCompression: 3
     animationRotationError: 0.5
-    animationPositionError: 0.5
+    animationPositionError: 0.01
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
@@ -125,7 +125,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
