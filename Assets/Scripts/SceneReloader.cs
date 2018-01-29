@@ -20,8 +20,6 @@ namespace VRStandardAssets
 		{
 			if (Input.GetKeyDown("a"))
 				SceneManager.LoadScene("Hellicar-Gallery-VR_02");
-
-
 		}
 
 		private void OnApplicationPause(bool pause)
