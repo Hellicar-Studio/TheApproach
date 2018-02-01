@@ -85,7 +85,7 @@ ModelImporter:
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'Base
       HumanLCalf2' : rotation error = 1.428357 deg\n\t'Base HumanRCalf2' : rotation
-      error = 2.203133 deg\n\t'Base HumanSpine3' : rotation error = 0.324343 deg\n\t'Base
+      error = 2.299554 deg\n\t'Base HumanSpine3' : rotation error = 0.324343 deg\n\t'Base
       HumanRibcage' : rotation error = 0.070685 deg\n\t'Base HumanNeck2' : rotation
       error = 0.755952 deg\n"
     animationImportErrors: 
@@ -94,16 +94,14 @@ ModelImporter:
       improve retargeting quality.\n\t'Base HumanLThigh2' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'Base HumanLCalf2' is
       inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
-      HumanLFoot' has scale animation that will be discarded.\n\t'Base HumanLDigit11'
-      has scale animation that will be discarded.\n\t'Base HumanRThigh2' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Base
-      HumanRCalf2' is inbetween humanoid transforms and has rotation animation that
-      will be discarded.\n\t'Base HumanRFoot' has scale animation that will be discarded.\n\t'Base
-      HumanRDigit11' has scale animation that will be discarded.\n\t'Base HumanSpine3'
+      HumanLDigit11' has scale animation that will be discarded.\n\t'Base HumanRThigh2'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
-      HumanRibcage' is inbetween humanoid transforms and has rotation animation that
-      will be discarded.\n\t'Base HumanNeck2' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n"
+      HumanRCalf2' is inbetween humanoid transforms and has rotation animation that
+      will be discarded.\n\t'Base HumanSpine3' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Base HumanRibcage' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      HumanNeck2' is inbetween humanoid transforms and has rotation animation that
+      will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -118,7 +116,7 @@ ModelImporter:
       name: FAST-WALK_01
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
