@@ -43414,15 +43414,14 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.26666668
-    functionName: AudioSource.Play
+    functionName: PlayAudio
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: dc08822894290df458384e36e641f6e1,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.5666667
-    functionName: 
+    functionName: PlayAudio
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: dc08822894290df458384e36e641f6e1,
       type: 3}
