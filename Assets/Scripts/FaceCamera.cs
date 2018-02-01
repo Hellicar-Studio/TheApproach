@@ -8,10 +8,12 @@ public class FaceCamera : MonoBehaviour {
 	public Transform target;
 	public Transform head;
 	public Transform anchor;
+	public AudioSource sniff;
 	private Vector3 dynamicTarget;
 	private Vector3 anchorPos;
 	private Vector3 forward;
 	private Vector3 camPos;
+	private float sniffDistance;
 	public float range;
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,8 @@ public class FaceCamera : MonoBehaviour {
 
 		dynamicTarget = camPos;
 
+		sniffDistance = sniff.maxDistance;
+
 	}
 
 	
@@ -31,10 +35,12 @@ public class FaceCamera : MonoBehaviour {
 		if (Vector3.Distance(head.position, anchorPos) < range)
 		{
 			dynamicTarget = camPos;
+			sniff.maxDistance = sniffDistance;
 		}
 		else
 		{
 			dynamicTarget = Vector3.Lerp(dynamicTarget, head.position + forward, 0.1f);
+			sniff.maxDistance = Mathf.Lerp(sniff.maxDistance, 0.0f, 0.1f);
 		}
 
 		head.LookAt(dynamicTarget);
