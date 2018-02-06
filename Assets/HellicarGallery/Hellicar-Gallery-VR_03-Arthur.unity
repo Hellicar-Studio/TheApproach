@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: be397f92170932c48b69bec7714b9b3f, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43727767, g: 0.48504233, b: 0.565313, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366996, g: 0.4842996, b: 0.5645487, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 213ce1d24e415cd449ce55c79b3397ce,
+  m_LightingDataAsset: {fileID: 112000008, guid: 96d6741592e439c4a84ab26a5aae0c62,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -8737,6 +8737,8 @@ GameObject:
   - component: {fileID: 1395238691}
   - component: {fileID: 1395238690}
   - component: {fileID: 1395238698}
+  - component: {fileID: 1395238700}
+  - component: {fileID: 1395238699}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8874,6 +8876,34 @@ MonoBehaviour:
   _useRadialDistance: 1
   _fadeToSkybox: 0
   _shader: {fileID: 4800000, guid: 3514cc2676a6c4db294c28459f22c359, type: 3}
+--- !u!114 &1395238699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395238689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2086501286748d74cbc29372993b8a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wobbleMat: {fileID: 2100000, guid: 8105e4fe2e6805646ab4d5bea7b4f96c, type: 2}
+  micManager: {fileID: 1395238700}
+--- !u!114 &1395238700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395238689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27372c952a3bed409ebf561aa6ecf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 41000
+  sampleWindow: 128
+  maxCaptureSeconds: 99
+  loop: 0
 --- !u!1 &1402500098
 GameObject:
   m_ObjectHideFlags: 0
