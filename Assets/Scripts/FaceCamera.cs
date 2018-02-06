@@ -39,7 +39,7 @@ public class FaceCamera : MonoBehaviour {
 		}
 		else
 		{
-			dynamicTarget = Vector3.Lerp(dynamicTarget, head.position + forward, 0.1f);
+			dynamicTarget = Vector3.Lerp(dynamicTarget, head.position + forward, 0.05f);
 			sniff.maxDistance = Mathf.Lerp(sniff.maxDistance, 0.0f, 0.1f);
 		}
 
