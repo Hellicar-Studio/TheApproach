@@ -7,6 +7,7 @@
 		_NoiseScale("Noise Scale", Range(0, 20)) = 1
 		_NoiseAmount("Noise Amount", Range(0, 5)) = 1
 		_NoiseSpeed("Noise Speed", Range(0, 20)) = 1
+		_NoiseDirection("Noise Direction", Vector) = (0, 0, 0, 0)
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -22,6 +23,7 @@
 		uniform float _NoiseScale;
 		uniform float _NoiseAmount;
 		uniform float _NoiseSpeed;
+		uniform float4 _NoiseDirection;
 
 		float mod289(float x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
 		float4 mod289(float4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -52,7 +54,7 @@
 		void vert(inout appdata_base v) {
 			float3 pos = v.vertex;
 
-			pos += _NoiseAmount * 0.5 - noise(pos * _NoiseScale + _Time.y * _NoiseSpeed) * _NoiseAmount;
+			pos += _NoiseDirection * (noise(pos * _NoiseScale + _Time.y * _NoiseSpeed) * _NoiseAmount);
 
 			v.vertex.xyz = pos;
 		}

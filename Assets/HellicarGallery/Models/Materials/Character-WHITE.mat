@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Character-WHITE
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 65a6e3b9f80f36c42a8094d23934a19d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -87,6 +87,9 @@ Material:
     - _Lacunarity: 1
     - _Metallic: 1
     - _Mode: 0
+    - _NoiseAmount: 0
+    - _NoiseScale: 20
+    - _NoiseSpeed: 20
     - _OcclusionStrength: 1
     - _Octaves: 100
     - _Parallax: 0.02
@@ -103,4 +106,5 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HighColor: {r: 1, g: 1, b: 1, a: 1}
     - _LowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseDirection: {r: 1, g: 1, b: 1, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
