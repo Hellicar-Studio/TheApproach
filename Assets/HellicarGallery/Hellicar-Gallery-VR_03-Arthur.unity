@@ -8889,6 +8889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wobbleMat: {fileID: 2100000, guid: 8105e4fe2e6805646ab4d5bea7b4f96c, type: 2}
   micManager: {fileID: 1395238700}
+  maxNoiseScale: 0.5
 --- !u!114 &1395238700
 MonoBehaviour:
   m_ObjectHideFlags: 0

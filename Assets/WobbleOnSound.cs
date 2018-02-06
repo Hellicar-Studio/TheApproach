@@ -6,15 +6,17 @@ public class WobbleOnSound : MonoBehaviour {
 
 	public Material wobbleMat;
 	public MicrophoneManager micManager;
+	public float maxNoiseScale;
 	private float soundLevel;
+	private float noiseScale;
 
 	float scale(float unscaledNum, float minAllowed, float maxAllowed, float min, float max)
 	{
 		float v = (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
-		if (v < min)
-			return min;
-		if (v > max)
-			return max;
+		if (v < minAllowed)
+			return minAllowed;
+		if (v > maxAllowed)
+			return maxAllowed;
 		return v;
 	}
 
@@ -27,7 +29,7 @@ public class WobbleOnSound : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		soundLevel = micManager.GetMicrophoneInputLevel();
-		Debug.Log("SoundLevel: " + soundLevel);
-		wobbleMat.SetFloat("_NoiseAmount", scale(soundLevel, 0, 1000, 0, 0.12f));
+		noiseScale = Mathf.Lerp(noiseScale, scale(soundLevel, 0, maxNoiseScale, 0, 1000), 0.1f);
+		wobbleMat.SetFloat("_NoiseAmount", noiseScale);
 	}
 }
