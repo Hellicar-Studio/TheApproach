@@ -87,7 +87,7 @@ Material:
     - _Lacunarity: 1
     - _Metallic: 1
     - _Mode: 0
-    - _NoiseAmount: 0.00008183575
+    - _NoiseAmount: 0.0028886625
     - _NoiseScale: 20
     - _NoiseSpeed: 20
     - _OcclusionStrength: 1
